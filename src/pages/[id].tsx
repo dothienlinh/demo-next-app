@@ -1,12 +1,9 @@
 import ComponentBlog from '@/components/Blog/Blog'
 import { RootState } from '@/redux/store'
-import { GetStaticPaths, GetStaticProps } from 'next'
 import { NextRouter, useRouter } from 'next/router'
-import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import { Blog } from '@/interfaces/blog'
 
-export default function BlogDetails(props: number): JSX.Element {
+export default function BlogDetails(): JSX.Element {
   const router: NextRouter = useRouter()
   const blogs = useSelector((state: RootState) => state.blog)
   const id: number = Number(router.query?.id)

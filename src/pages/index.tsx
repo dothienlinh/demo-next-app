@@ -1,12 +1,9 @@
-import { Inter } from 'next/font/google'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import type { RootState } from '@/redux/store'
-import { ChangeEvent, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { IoMdAdd } from 'react-icons/io'
 import Form from '@/components/Form/Form'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home(): JSX.Element {
   const blogs = useSelector((state: RootState) => state.blog)

@@ -1,4 +1,4 @@
-import { Tuple, configureStore } from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit'
 import blogReducer from './reducer/blogSlice'
 
 export const store = configureStore({
